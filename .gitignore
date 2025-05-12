@@ -1,0 +1,14 @@
+# ignore temp file
+thumbs.db
+.DS_Store
+
+# npm
+node_modules/
+package-lock.json
+
+# python
+__pycache__/
+*.py[cod]
+
+# ignore IDE files
+.vscode/
