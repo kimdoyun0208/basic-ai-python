@@ -13,8 +13,10 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(10, activation='softmax')
 ])
 
+loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
+
 model.compile(optimizer='adam',
-              loss='sparse_categorical_crossentropy',
+              loss=loss_fn,
               metrics=['accuracy'])
 
 model.fit(x_train, y_train, epochs=10)
